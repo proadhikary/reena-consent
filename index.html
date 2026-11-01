@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Psychotherapy Intake &amp; Informed Consent | Mrs. Reena Rawat</title>
+  <style>
+    :root{--ink:#242424;--muted:#666;--line:#b9b9b9;--accent:#2b4c63;--paper:#fff;--bg:#e9e9e9}
+    *{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 Georgia,"Times New Roman",serif}
+    .paper{max-width:900px;margin:32px auto;padding:58px 70px;background:var(--paper);box-shadow:0 3px 18px #0001}
+    header{text-align:center;border-bottom:1px solid var(--line);padding-bottom:22px;margin-bottom:28px}
+    h1{font-size:25px;letter-spacing:.04em;line-height:1.25;margin:0 0 8px;color:var(--accent)}
+    .subtitle{font-size:17px;margin:0 0 12px}.provider{font-size:15px;line-height:1.45}
+    h2{font-size:18px;color:var(--accent);margin:30px 0 12px;padding-bottom:5px;border-bottom:1px solid #d5d5d5}
+    h3{font-size:16px;margin:18px 0 6px} p{margin:8px 0 12px}.intro{color:#333}
+    .field-grid{display:grid;grid-template-columns:1fr 1fr;gap:13px 20px}
+    label.field{display:flex;flex-direction:column;gap:5px;font-size:14px;font-weight:bold}
+    input,textarea{width:100%;padding:9px 10px;border:1px solid #999;border-radius:2px;background:#fff;color:#222;font:15px Georgia,"Times New Roman",serif}
+    textarea{min-height:78px;resize:vertical}.full{grid-column:1/-1}
+    .checkline{display:flex;gap:10px;align-items:flex-start;font-size:15px;margin:10px 0}.checkline input{width:auto;margin-top:5px}
+    .contact{border:1px solid #bbb;padding:14px 16px;margin:12px 0}.contact .field-grid{grid-template-columns:1fr 1fr}
+    ul{padding-left:24px}li{margin:5px 0}.notice{margin-top:25px;padding:12px 14px;border:1px solid #9d6d6d;color:#6d2929;font-weight:bold}
+    .actions{display:flex;gap:12px;justify-content:center;margin:28px auto 8px;flex-wrap:wrap}
+    button{border:0;background:var(--accent);color:#fff;padding:12px 22px;font:16px Arial,sans-serif;border-radius:4px;cursor:pointer}
+    button.secondary{background:#555}#submitMessage{display:none;margin:15px 0;padding:12px;border:1px solid #9d6d6d;background:#fff8f8;color:#6d2929}
+    .small{font-size:13px;color:var(--muted)}
+    @media(max-width:700px){.paper{margin:0;padding:28px 20px}.field-grid,.contact .field-grid{grid-template-columns:1fr}h1{font-size:21px}}
+    @media print{body{background:#fff;font-size:11pt}.paper{max-width:none;margin:0;padding:0;box-shadow:none}.actions,#submitMessage,.no-print{display:none!important}input,textarea{border:0;border-bottom:1px solid #999;padding:3px 0}textarea{min-height:55px}h2{page-break-after:avoid}.contact{page-break-inside:avoid}}
+  </style>
+</head>
+<body>
+<main class="paper">
+  <header>
+    <h1>INTAKE AND INFORMED CONSENT FORM</h1>
+    <p class="subtitle">Individual Psychotherapy Services</p>
+    <div class="provider"><strong>Mrs. Reena Rawat</strong><br>Clinical Psychologist<br>CRR Registration No.: <strong>A98851</strong><br>Trauma-Informed Therapist</div>
+  </header>
+  <p class="intro">Please read this form carefully. It contains important information about psychotherapy, your rights and responsibilities, and the policies governing our work together. Please ask any questions or raise concerns before providing consent.</p>
+
+  <form id="consentForm">
+    <h2>1. Client Intake Information</h2>
+    <div class="field-grid">
+      <label class="field">Email address *<input type="email" name="email" required></label>
+      <label class="field">Full name (first, middle, last) *<input name="fullName" required></label>
+      <label class="field">Age *<input type="number" name="age" min="18" required></label>
+      <label class="field">Date of birth<input type="date" name="dob"></label>
+      <label class="field">Gender *<input name="gender" required></label>
+      <label class="field">Pronouns (e.g., she/he/they/ze) *<input name="pronouns" required></label>
+      <label class="field">Relationship status<input name="relationship"></label>
+      <label class="field">Phone number(s) *<input type="tel" name="phone" required></label>
+      <label class="field full">Home / postal address<textarea name="address"></textarea></label>
+      <label class="field full">Occupation<input name="occupation"></label>
+    </div>
+
+    <h2>2. Presenting Concerns and Clinical Background</h2>
+    <label class="field">What concerns or goals have led you to consider psychotherapy? *<textarea name="concerns" required></textarea></label>
+    <p><strong>Do you currently have, or have you had in the past month, thoughts, ideas, or plans about hurting yourself? *</strong></p>
+    <label class="checkline"><input type="radio" name="selfHarm" value="Yes" required> Yes</label>
+    <label class="checkline"><input type="radio" name="selfHarm" value="No" required> No</label>
+    <label class="field">If you answered “Yes,” would you like to share any details?<textarea name="selfHarmDetails"></textarea></label>
+    <label class="field">Any past experience of therapy or counselling that you would like the therapist to know about?<textarea name="therapyHistory"></textarea></label>
+    <label class="field">Any current or past psychiatric consultations or medication you would like the therapist to know about?<textarea name="psychiatricHistory"></textarea></label>
+    <label class="field">Any current or past medical history you would like the therapist to know about?<textarea name="medicalHistory"></textarea></label>
+
+    <h2>3. Emergency Contacts</h2>
+    <p>In an emergency—including a health crisis, a strong urge to harm yourself or another person, or another situation requiring urgent medical or psychiatric attention—the therapist may need to contact someone who can reach you quickly and provide support. Where possible, list people who know you are receiving therapy.</p>
+    <p><strong>At least one emergency contact is required before psychotherapy can begin.</strong> Please provide additional contacts if possible.</p>
+    <div class="contact"><h3>Emergency contact 1 *</h3><div class="field-grid">
+      <label class="field">Name *<input name="emergency1Name" required></label>
+      <label class="field">Relationship *<input name="emergency1Relationship" required></label>
+      <label class="field">Phone number(s) *<input type="tel" name="emergency1Phone" required></label>
+      <label class="field">Email address(es)<input type="email" name="emergency1Email"></label>
+    </div></div>
+    <div class="contact"><h3>Emergency contact 2</h3><div class="field-grid">
+      <label class="field">Name<input name="emergency2Name"></label>
+      <label class="field">Relationship<input name="emergency2Relationship"></label>
+      <label class="field">Phone number(s)<input type="tel" name="emergency2Phone"></label>
+      <label class="field">Email address(es)<input type="email" name="emergency2Email"></label>
+    </div></div>
+
+    <h2>4. About Psychotherapy</h2>
+    <p>Psychotherapy is a process intended to help people experiencing emotional distress that affects relationships, physical well-being, occupational functioning, or social life. It may support greater understanding of personal goals and values, improve relationships, and address concerns that led you to seek therapy. Your goals will be discussed and revisited throughout the process.</p>
+    <p>Psychotherapy is collaborative and requires your active participation. The therapist does not ordinarily provide instructions, solutions, advice, or suggestions about what you should do. Instead, the therapist asks questions and helps you notice experiences or patterns, supporting you in developing insights and making your own decisions.</p>
+    <p>Sessions are scheduled at a mutually agreed pace. Psychotherapy is an ongoing process and is not an emergency service available on demand during a crisis.</p>
+    <p>Although many people benefit from psychotherapy, it can also involve risks. Exploring past and present experiences may bring up uncomfortable or intense feelings. Please communicate openly if you experience significant discomfort or dissatisfaction. We can discuss adjustments to the approach; if therapy with me does not seem to meet your needs, I may recommend another qualified provider.</p>
+
+    <h2>5. Your Role and Rights as a Client</h2>
+    <p><strong>Your role:</strong> Please attend sessions consistently, participate openly and honestly, and take an active role in setting and working toward your goals. Give advance notice if you need to cancel or reschedule. Let your therapist know about changes in circumstances, medication, or safety that may affect your care. For virtual sessions, please be in a private, distraction-free space and physically located where the therapist is authorised to practise. Between sessions, you remain responsible for your safety and well-being. In a crisis, use appropriate emergency resources.</p>
+    <p><strong>Your rights:</strong> You may ask questions, request additional information, or refuse therapy or diagnostic procedures. You may raise concerns or complaints at any time. You may also end therapy at any time without prejudice. If you wish, your therapist can provide referrals to other qualified professionals.</p>
+
+    <h2>6. Telepsychotherapy (Virtual Sessions)</h2>
+    <p>Telepsychotherapy may improve access to care and reduce barriers such as travel, stigma, geographical limitations, or limited availability of qualified clinicians. Both therapist and client should make reasonable efforts to use a reliable internet connection and minimise interruptions.</p>
+    <p>If technical problems interrupt a session, the therapist will attempt to reconnect for a reasonable period. If reconnection is not possible, the therapist will contact you through an agreed alternative channel to reschedule. Technology-related privacy or security breaches remain possible despite reasonable safeguards. Please weigh these risks against the benefits of remote care.</p>
+
+    <h2>7. Confidentiality and Its Limits</h2>
+    <p>The therapist is committed to protecting your privacy. Information shared in therapy and written records will ordinarily remain confidential and will not be disclosed to another party without your written consent. Session notes will be maintained and stored securely. A written Release of Information will be requested when disclosure is authorised by you.</p>
+    <p>Confidentiality may be limited when the therapist believes there is a serious risk of harm to you or another person; when abuse involving a child, older adult, or person with a disability is suspected or disclosed and reporting is required; when disclosure is required by a court order or applicable law; or when third-party reimbursement requires a diagnosis, treatment plan, or clinical summary. Where appropriate and legally permitted, the therapist may contact your emergency contact and disclose only information necessary for the situation.</p>
+
+    <h2>8. Communication Between Sessions</h2>
+    <p>For appointment reminders, cancellations, or administrative communication, the therapist may contact you using the details you provide.</p>
+    <p>Email: <strong>sampurnachakraborty92@gmail.com</strong><br>Phone / text: <strong>08582947749</strong></p>
+    <p>The therapist aims to respond as soon as possible, usually within 24 hours, except during major holidays. Email and text are best used for administrative matters. Please do not rely on these channels for emergency support or contact the therapist through social-media messaging.</p>
+
+    <h2>9. Fees, Payment, Rescheduling, Cancellation, and No-Show</h2>
+    <p>The session fee has been discussed and agreed upon based on the type of service. Payment may be made by bank transfer or UPI. Payment is expected in advance, by the day before the session, when a confirmation message or email is sent.</p>
+    <h3>Rescheduling</h3><p>Please provide at least 24 hours' notice to reschedule. If the therapist needs to reschedule, 24–48 hours' notice will be provided wherever possible.</p>
+    <h3>Cancellation</h3><p>Once an appointment is scheduled, the time is reserved for you. Please provide at least 24 hours' notice if you need to cancel. For cancellations with less than 24 hours' notice, the full session fee is payable.</p>
+    <h3>No-show</h3><p>If you have not joined within 20 minutes of the scheduled start time, the session will be considered a no-show unless you have communicated a connectivity issue. No refund is provided for missed sessions.</p>
+
+    <h2>10. Termination of Services</h2>
+    <p>Either you or your therapist may end therapy at any time. If you decide to discontinue, please inform the therapist so that, if appropriate, a final session can be scheduled. Where appropriate, referrals may be offered.</p>
+
+    <h2>11. Therapist's Commitment</h2>
+    <p>Mrs. Reena Rawat is a clinical psychologist who works using a trauma-informed, process-oriented, and strength-based approach. Therapy is tailored to each client's needs and goals, drawing on an eclectic range of modalities.</p>
+    <p>The therapist is committed to competent, ethical, evidence-informed, and compassionate care; maintaining confidentiality within the limits described in this agreement; communicating openly about treatment; welcoming feedback and questions; and recommending referral when another provider may better meet your needs.</p>
+    <p><strong>Mrs. Reena Rawat</strong><br>Clinical Psychologist<br>CRR Registration No.: A98851<br>Trauma-Informed Therapist</p>
+
+    <h2>12. Client's Informed Consent</h2>
+    <p>By signing below, I confirm that I have read and understood this agreement, had the opportunity to ask questions and clarify any concerns, and agree to the policies described above during our professional relationship.</p>
+    <p>I consent to my therapist contacting my support person or emergency contact in the situations described in this agreement. I understand that this may involve disclosure of limited confidential information and trust that such disclosure will be restricted to what is necessary and appropriate.</p>
+    <p>I provide my informed consent to participate in individual psychotherapy services with Mrs. Reena Rawat, Clinical Psychologist (CRR Registration No.: A98851).</p>
+    <label class="checkline"><input type="checkbox" name="consent" required> I have read, understood, and agree to the above and give my consent. *</label>
+    <div class="field-grid">
+      <label class="field">Client's full name *<input name="signName" required></label>
+      <label class="field">Date *<input type="date" name="signDate" required></label>
+      <label class="field full">Client signature (type full name) *<input name="signature" required></label>
+      <label class="field full">Therapist's signature / date (to be completed by therapist)<input name="therapistSignature"></label>
+    </div>
+    <div class="notice">Important notice: Emergency services do not fall within the scope of services provided.</div>
+    <p class="small">Privacy notice: This standalone webpage does not transmit or store form responses. Use Print / Save as PDF and share the completed document through a secure channel agreed with the therapist.</p>
+    <div id="submitMessage" role="status"></div>
+    <div class="actions no-print"><button type="button" class="secondary" onclick="window.print()">Print / Save as PDF</button><button type="submit">Submit Form</button></div>
+  </form>
+</main>
+<script>
+  const form=document.getElementById("consentForm"), msg=document.getElementById("submitMessage");
+  form.addEventListener("submit",e=>{e.preventDefault();if(!form.reportValidity())return;msg.style.display="block";msg.textContent="Thank you. This webpage is not connected to a secure submission service, so your responses have NOT been sent to the therapist. Please use Print / Save as PDF and share the completed document through a secure channel agreed with the therapist.";msg.scrollIntoView({behavior:"smooth",block:"center"})});
+</script>
+</body>
+</html>
